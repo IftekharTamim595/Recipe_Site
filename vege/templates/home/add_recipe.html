@@ -1,0 +1,64 @@
+{% extends 'home/common.html' %} {% block common %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      {% if message %}
+      <div class="alert alert-success text-center">{{ message }}</div>
+      {% endif %}
+      <div class="card shadow-lg p-4">
+        <h1 class="text-center mb-4">Add Recipe</h1>
+        <form
+          method="post"
+          action="{% url 'add_recipe' %}"
+          enctype="multipart/form-data"
+        >
+          {% csrf_token %}
+          <div class="mb-3">
+            <label class="form-label">Recipe Name</label>
+            <input
+              name="recipe_name"
+              required
+              type="text"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea
+              name="recipe_description"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="imageInput" class="form-label">Recipe Photo</label>
+            <input
+              name="recipe_image"
+              type="file"
+              class="form-control"
+              id="imageInput"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+              required
+            />
+            <label class="form-check-label" for="exampleCheck1">
+              I agree with terms and conditions
+            </label>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success">Add Recipe</button>
+            <a href="{% url 'recipe_list' %}" class="btn btn-primary"
+              >View Recipe List</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

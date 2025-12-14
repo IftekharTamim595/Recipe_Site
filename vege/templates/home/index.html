@@ -1,0 +1,27 @@
+{% extends 'home/common.html' %} {% block common %}
+
+<div class="container mt-5">
+  <h1>Recipe App</h1>
+
+  <p class="text-muted">Welcome! Use the links below to manage recipes.</p>
+
+  <hr />
+
+  <div class="list-group col-6">
+    <a
+      href="{% url 'recipe_list' %}"
+      class="list-group-item list-group-item-action"
+    >
+      📋 View Recipes
+    </a>
+
+    <a
+      href="{% url 'add_recipe' %}"
+      class="list-group-item list-group-item-action"
+    >
+      ➕ Add New Recipe
+    </a>
+  </div>
+</div>
+
+{% endblock %}

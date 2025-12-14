@@ -1,0 +1,47 @@
+{% extends 'home/common.html' %} {% block common %}
+<div class="container mt-5">
+  <form
+    class="col-6 mx auto card p-3 shadow-lg"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    {% csrf_token %}
+    <h1>Update Recipes</h1>
+    <hr />
+    <div class="mb-3">
+      <label for="Name" class="form-label">Updated Recipe Name:</label>
+      <input name="recipe_name" value="{{sentobj.name}}" required type="text" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description:</label>
+      <textarea name="recipe_description" class="form-control" rows="3">
+{{ sentobj.description }}</textarea
+      >
+    </div>
+    <div class="mb-3">
+      <label for="imageInput" class="form-label" name="recipe_image"
+        >Recipe Photo</label
+      >
+      <input
+        name="recipe_image"
+        type="file"
+        class="form-control"
+        id="imageInput"
+      />
+    </div>
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        required
+      />
+      <label class="form-check-label" for="exampleCheck1"
+        >I agree with terms and conditions</label
+      >
+    </div>
+    <button type="submit" class="btn btn-success">Update Recipe</button>
+  </form>
+</div>
+
+{% endblock %}
