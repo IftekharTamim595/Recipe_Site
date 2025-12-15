@@ -1,6 +1,6 @@
 # Recipe App
 
-This is my first Django project, focused on learning the basics of Django, templates, and CRUD operations. The app allows users to manage recipes by creating, reading, updating, and deleting them.
+This is my first Django project, focused on learning the basics of Django, templates, and CRUD operations. The app allows users to manage recipes by creating, reading, updating, deleting & Searching them.
 
 ---
 
@@ -10,6 +10,7 @@ This is my first Django project, focused on learning the basics of Django, templ
 - **View Recipes:** List all recipes and search by recipe name.
 - **Update Recipe:** Edit existing recipes, including changing the image.
 - **Delete Recipe:** Remove recipes from the database.
+- **Search REcipe:** Search Recipe from the database.
 - **Basic Templates:** Used Django templates to render forms and lists.
 - **Media Upload:** Handled image uploads for recipes.
 
