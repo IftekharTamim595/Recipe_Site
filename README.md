@@ -26,74 +26,73 @@ This is my first Django project, focused on learning the basics of Django, templ
 
 ---
 
-## Project Structure
-
-# Recipe App 🍳
-
-A simple and functional Django web application for managing personal recipes. This project demonstrates basic CRUD (Create, Read, Update, Delete) operations, image handling, and search functionality using the Django framework.
-
 ## 📂 Project Structure
 
+```
 todo/
-├── vege/                  # Application Directory (The 'vege' app)
-│   ├── templates/         # HTML templates
+├── vege/
+│   ├── templates/
 │   │   ├── add_recipe.html
 │   │   ├── recipe_list.html
 │   │   └── index.html
-│   └── views.py           # Application logic and request handlers
-├── todo/                  # Project Configuration
+│   └── views.py
+├── todo/
 │   ├── settings.py
-│   └── urls.py            # Project-level URL routing
-├── media/                 # Directory for uploaded recipe images
-├── db.sqlite3             # SQLite Database file
-└── manage.py              # Django command-line utility
+│   └── urls.py
+├── media/
+├── db.sqlite3
+└── manage.py
+```
 
-🛠️ Installation & Setup
+## 🛠️ Installation & Setup
 
 Follow these steps to run the project locally.
 
-1. Clone the repository
-
+### 1. Clone the repository
+```bash
 git clone <your-repo-url>
 cd Recipe_Site
+```
 
+### 2. Create and activate a virtual environment
 
-2. Create and activate a virtual environment
-For macOS/Linux:
-
+**For macOS / Linux:**
+```bash
 python3 -m venv myvenv
 source myvenv/bin/activate
+```
 
-
-For Windows:
-
+**For Windows:**
+```bat
 python -m venv myvenv
 myvenv\Scripts\activate
+```
 
-
-3. Install Dependencies
-
+### 3. Install dependencies
+```bash
 pip install django pillow
+```
 
-
-4. Apply Migrations
-Initialize the database structure:
-
+### 4. Apply migrations
+```bash
 python manage.py migrate
+```
 
-
-5. Run the Development Server
-Start the application:
-
+### 5. Run the development server
+```bash
 python manage.py runserver
+```
 
-
-6. Access the App
-Open your web browser and navigate to:
+### 6. Access the app
+Open your browser and visit:
+```
 http://127.0.0.1:8000
+```
 
-📝 Notes
+---
 
-Learning Focus: This project emphasizes functionality over complex styling, making it a great learning resource.
+## 📝 Notes
 
-Media: Uploaded recipe images are stored in the media/ directory.
+- **Learning Focus:** This project prioritizes functionality over heavy styling.
+- **Media Storage:** Uploaded recipe images are stored in the `media/` directory.
+
